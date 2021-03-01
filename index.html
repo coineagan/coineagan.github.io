@@ -1,0 +1,109 @@
+---
+layout: index
+---
+<div class="container">
+  <div class="flex top">  
+    <div class="issue flex-spacer">
+      <div class="issue-number"></div>
+      <a href="https://minburu.com" class="issue-inner">
+        <img src="/images/mystic_hands.svg" alt="hands with a watchful eye">      
+        <h1>Minburu</h1>
+        <p>Minburu is one of my apps. It's an editor for writing notes that has bi-directional link support and spaced repetition to help you develop and find connections between your ideas</p>
+      </a>
+    </div>
+
+    <div class="flex-spacer">
+      {% for post in site.posts offset: 0 limit: 1 %}
+        <a href="{{ post.url }}" class="featured">    
+          <div class="latest">LATEST POST</div>
+          <img src="{{ post.image }}" alt="">
+          <h1>{{ post.title }}</h1>
+          <p>{{ post.teaser | truncate: 150 }}.</p>        
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <ul class="list-blog">
+    {% for post in site.posts offset: 1 limit: 4 %}
+      <li class="flex">
+        <div class="image"><img src="{{ post.image }}" alt="{{ post.alt }}"></div>
+        <div class="flex-spacer">
+          <small>{{ post.date | date: "%b.%e.%Y" }}</small>
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <p>{{ post.teaser | truncate: 150 }}</p>
+        </div>
+      </li>
+      <div class="divider"></div>
+    {% endfor %}
+  </ul>
+
+  <form class="newsletter alert" action="https://tinyletter.com/coineagan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/coineagan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    <img src="/images/mailing_list.svg" alt="">
+    <h1>Join the mailing list</h1>
+    <p>
+      <input type="text" name="email" id="tlemail", placeholder: "Your email here" />
+    </p>
+    <input type="hidden" value="1" name="embed"/>
+    <input type="submit" value="Join" />
+  </form>
+
+  <div class="newsletter-divider"></div>
+
+  {% for post in site.posts offset:5 limit:1 %}
+    <div class="flex blog-half">
+      <div class="flex flex-spacer flex-center">
+        <img src="{{ post.image }}" alt="{{ post.alt }}" height="250">
+      </div>
+      <div class="flex-spacer">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p>{{ post.teaser | truncate: 300 }}</p>
+        <small>{{ post.date | date: "%b.%e.%Y" }}</small>
+      </div>
+    </div>
+  {% endfor %}
+
+  <div class="block-divider">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
+
+  <a href="https://twitter.com/coineagan" class="social">
+    <img src="/images/twitter.svg" alt="twitter icon">
+    Follow Coineagan on Twitter
+  </a>
+
+  <div class="flex blog-tall wrap">
+    {% for post in site.posts offset:6 limit:4 %}
+      <div class="flex-half">
+        <div class="blog-tall">
+          <div class="image">
+            <img src="{{ post.image }}" alt="{{ post.alt }}">
+          </div>
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <p>{{ post.teaser | truncate: 300 }}</p>
+          <small>{{ post.date | date: "%b.%e.%Y" }}</small>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="alert">
+    If you enjoy my writing, share it with a friend or on social media where the Blessed Zuckerberg will rain the life-affirming currency of likes down upon me!
+  </div>
+
+  <ul class="list-blog">
+    {% for post in site.posts offset:8 %}
+      <li class="flex">
+        <div class="image"><img src="{{ post.image }}" alt="{{ post.alt }}"></div>
+        <div class="flex-spacer">
+          <small>{{ post.date | date: "%b.%e.%Y" }}</small>
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <p>{{ post.teaser | truncate: 150 }}</p>
+        </div>
+      </li>
+      <div class="divider"></div>
+    {% endfor %}
+  </ul>
+</div>

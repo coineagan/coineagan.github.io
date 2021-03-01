@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+
+  <link rel="icon" sizes="16x16" href="{{ page.image }}">
+  <link rel="stylesheet" href="/post.css">
+
+</head>
+<body>
+
+  {% if page.length == "long" %}
+    <div class="flex layout-long-preview">
+      <div class="flex-spacer layout-long-preview-left">
+        <h1>
+          <a href="/" class="blank-coineagan">C</a>
+          <br>
+          <small>{{ page.date | date: "%b.%e.%Y" }}</small>
+        </h1>
+
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.teaser }}</p>
+      </div>
+
+      <div class="flex-spacer layout-long-preview-right">
+        <img src="{{ page.image }}" alt="{{ page.alt }}" height="320">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        {{ content }}
+      </div>
+  
+      <div class="block-divider">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+  
+      <div class="newsletter alert">
+        <img src="/images/mailing_list.svg" alt="">
+        <h1>Join the mailing list</h1>
+        <input type="text" placeholder="Your email here">
+        <input type="submit" value="Join">
+      </div>
+  
+      <div class="newsletter-divider"></div>
+    </div>
+  {% endif %}
+
+  {% if page.length == "medium" %}
+    <div class="container container-inner">
+      <h1><a href="/" class="blank-coineagan">C</a></h1>
+      <div class="center">
+        <small>{{ page.date | date: "%b.%e.%Y" }}</small>
+        <h1>
+          <img src="{{ page.image }}" alt="{{ page.alt }}">
+          <br>
+          {{ page.title }}
+        </h1>
+      </div>
+
+      <div class="content">
+        {{ content }}
+      </div>
+  
+      <div class="block-divider">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+  
+      <div class="newsletter alert">
+        <img src="/images/mailing_list.svg" alt="">
+        <h1>Join the mailing list</h1>
+        <input type="text" placeholder="Your email here">
+        <input type="submit" value="Join">
+      </div>
+  
+      <div class="newsletter-divider"></div>
+
+    </div>
+  {% endif %}
+
+  {% if page.length == "short" %}
+    <div class="container container-inner">
+      <h1><a href="/" class="blank-coineagan">C</a></h1>
+      <small>{{ page.date | date: "%b.%e.%Y" }}</small>
+      <h1>{{ page.title }}</h1>
+
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  {% endif %}
+
+</body>
+</html>
+
+
+

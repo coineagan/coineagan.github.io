@@ -1,0 +1,125 @@
+
+
+<div class="container">
+
+  <div class="flex top">
+
+    <%= link_to root_path, class: "issue flex-spacer" do %>
+      <div class="issue-number">1</div>
+      <div class="issue-inner">
+        <%= image_tag("eye") %>
+        <h1>Watchful Media</h1>
+        <small>ISSUE NO1 / SPRING 2021</small>
+        <p>A look at manipulation on individuals and it's affect on society.</p>
+      </div>
+    <% end %>   
+
+    <div class="flex-spacer">
+      <%= link_to @articles.first, class: "featured" do %>
+        <div class="latest">LATEST</div>
+        <%= image_tag(@articles.first.image, alt: @articles.first.alt) %>    
+        <h1><%= @articles.first.title %></h1>
+        <%= @articles.first.teaser %>
+        <% if @articles.first.restricted %>
+          <div class='subscriber-only'>SUBSCRIBER ONLY</div>
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+
+  <ul class="list-blog">
+    <% @articles[1..5].each_with_index do |article, index| %>
+      <li class="flex">
+        <div class="image"><%= image_tag(article.image, alt: article.alt) %></div>
+        <div class="flex-spacer">
+          <small><%= article.created_at.strftime("%b.%e.%Y") %></small>
+          <h1><%= link_to article.title, article %></h1>
+          <p><%= article.teaser.truncate(150) %></p>
+          <% if article.restricted %>
+            <div class='subscriber-only'>SUBSCRIBER ONLY</div>
+          <% end %>
+        </div>
+      </li>
+      <div class="divider"></div>
+    <% end %>
+  </ul>
+
+  <div class="newsletter alert">
+    <%= image_tag("mailing_list") %>
+    <h1>Join the mailing list</h1>
+    <input type="text" placeholder="Your email here">
+    <input type="submit" value="Join">
+  </div>
+
+  <div class="newsletter-divider"></div>
+
+  <% @articles[2..2].each_with_index do |article, index| %>
+    <div class="flex blog-half">
+      <div class="flex flex-spacer flex-center"><%= image_tag(article.image, alt: article.alt, height: 250) %></div>
+      <div class="flex-spacer">
+        <h1><%= link_to article.title, article %></h1>
+        <p><%= article.teaser.truncate(300) %></p>
+        <small><%= article.created_at.strftime("%b.%e.%Y") %></small>
+        <% if article.restricted %>
+          <div class='subscriber-only'>SUBSCRIBER ONLY</div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="block-divider">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
+
+  <a href="https://twitter.com/coineagan" class="social">
+    <%= image_tag("twitter") %>
+    Follow Coineagan on Twitter
+  </a>
+
+  <div class="flex blog-tall wrap">
+    <% @articles[1..5].each_with_index do |article, index| %>
+      <div class="flex-half">
+        <div class="blog-tall">
+          <div class="image">
+            <%= image_tag(article.image, alt: article.alt) %>
+          </div>
+          <h1><%= link_to article.title, article %></h1>
+          <p><%= article.teaser.truncate(300) %></p>
+          <small><%= article.created_at.strftime("%b.%e.%Y") %></small>
+          <% if article.restricted %>
+            <div class='subscriber-only'>SUBSCRIBER ONLY</div>
+          <% end %>
+        </div>     
+      </div>
+    <% end %>
+  </div>
+
+  <div class="alert">
+    <u>Get the first issue</u>, <i>Watchful Media</i>, for only $6.95. This issue explores technology and its affect on our psychology and society. You can also <u>subscribe annually</u> for $19.95 to get access to all issues and subscription only content.
+  </div>
+
+    <ul class="list-blog">
+    <% @articles[1..5].each_with_index do |article, index| %>
+      <li class="flex">
+        <div class="image"><%= image_tag(article.image, alt: article.alt) %></div>
+        <div class="flex-spacer">
+          <small><%= article.created_at.strftime("%b.%e.%Y") %></small>
+          <h1><%= link_to article.title, article %></h1>
+          <p><%= article.teaser.truncate(150) %></p>
+          <% if article.restricted %>
+            <div class='subscriber-only'>SUBSCRIBER ONLY</div>
+          <% end %>
+        </div>
+      </li>
+      <div class="divider"></div>
+    <% end %>
+  </ul>
+
+  <div class="center">
+    <%= link_to "See all", all_path, class: "button" %>
+  </div>  
+
+</div>

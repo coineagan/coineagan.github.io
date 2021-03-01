@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+}
+.container {
+  width: 100%;
+  max-width: 50rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+header {
+  display: flex;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+nav {
+  flex: 0 0 8rem;
+}
+nav a,
+nav a:visited {
+  color: #000;
+}
+nav:hover a {
+  color: #fbe456;
+}
+header a.coineagan {
+  color: #000;
+}
+a.coineagan {
+  font-size: 3rem;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-left {
+  margin-right: auto;
+  border-right: 1px solid #000;
+}
+.nav-right {
+  margin-left: auto;
+  border-left: 1px solid #000;
+}
+.nav-left a,
+.nav-right a {
+  display: block;
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+.nav-left:hover a,
+.nav-right:hover a {
+  cursor: pointer;
+  background-color: #000;
+}
+.top {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #000;
+}
+.issue {
+  position: relative;
+  margin-right: 1rem;
+  background-color: #fbe456;
+  text-align: center;
+}
+.issue-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  background-color: #fbe456;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  border-bottom: 1px dashed #000;
+  border-right: 1px dashed #000;
+}
+a.issue-inner {
+  display: block;
+  padding: 3rem;
+  color: #000;
+}
+a.featured,
+a.issue {
+  display: block;
+  color: #000;
+}
+a.featured {
+  height: 100%;
+}
+.featured h1,
+.issue h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.issue small {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+a.featured {
+  position: relative;
+  padding: 3rem;
+  border: 1px solid #000;
+  text-align: center;
+}
+.featured .latest {
+  position: absolute;
+  top: -0.875rem;
+  left: 1rem;
+  background-color: #fff;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.list-blog .image {
+  flex: 0 0 8rem;
+  margin-right: 3rem;
+  border-right: 1px solid #000;
+}
+.blog-half small,
+.blog-tall small,
+.list-blog small {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #666;
+}
+.blog-tall h1 a,
+.list-blog h1 a {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.list-blog .divider {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  width: 10rem;
+  border-bottom: 1px solid #000;
+}
+.alert {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fbe456;
+}
+.newsletter h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.newsletter input[type="text"] {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+}
+.newsletter input[type="submit"] {
+  padding: 0.5rem 4rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000;
+  background-color: #fbe456;
+  font-size: 1.25rem;
+}
+.newsletter input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fbe456;
+}
+.newsletter-divider {
+  height: 1rem;
+  margin-bottom: 3rem;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.blog-half {
+  margin-bottom: 3rem;
+}
+.blog-half h1 {
+  margin-bottom: 1rem;
+}
+.blog-half h1 a {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+}
+.blog-half p {
+  font-size: 1.25rem;
+}
+.block-divider {
+  display: flex;
+  justify-content: space-between;
+}
+.block-divider .block {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 3rem;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 1.25rem;
+}
+.social img {
+  margin-right: 1rem;
+}
+.social:hover {
+  background-color: #fbe456;
+}
+.blog-tall {
+  margin-bottom: 3rem;
+}
+.blog-tall .image {
+  margin-bottom: 2rem;
+}
+.blog-tall .flex-half {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+.blog-tall .flex-half:nth-child(odd) {
+  padding-right: 1rem;
+  border-right: 1px solid #000;
+}
+.blog-tall .flex-half:nth-child(even) {
+  padding-left: 1rem;
+}
+footer {
+  margin: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #000;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+}
+footer a.coineagan {
+  color: #fbe456;
+}
+.flex {
+  display: flex;
+}
+.flex-spacer {
+  flex: 1;
+}
+.flex-half {
+  flex: 0 0 50%;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  text-align: center;
+}
+@media (max-width: 680px) {
+  .flex {
+    display: block;
+  }
+  .hide-small {
+    display: none !important;
+  }
+  .issue {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  header .nav-right {
+    border-left: none;
+  }
+  .blog-tall .flex-half:nth-child(odd),
+  .list-blog .image,
+  header .nav-left {
+    border-right: none;
+  }
+  .blog-half {
+    text-align: center;
+  }
+  .blog-tall {
+    padding-top: 2rem;
+  }
+  .blog-tall,
+  .list-blog {
+    text-align: center;
+  }
+  .list-blog .image {
+    margin-right: 0;
+  }
+  .blog-tall {
+    padding-top: 0;
+  }
+}
+@media (min-width: 681px) {
+  .hide-large {
+    display: none !important;
+  }
+}
