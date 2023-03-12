@@ -1,8 +1,7 @@
 source "https://rubygems.org"
-gem "jekyll", "~> 4.2.1"
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-end
+
+gem "jekyll", github: "jekyll/jekyll", ref: "refs/pull/9248/head"
+
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", "~> 1.2"
   gem "tzinfo-data"
