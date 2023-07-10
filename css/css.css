@@ -68,31 +68,33 @@ a:active {
   text-decoration: none;
 }
 
-.name {
-  font-weight: normal;
-  font-size: 2rem;
-}
-
 h2 {
   margin-bottom: 4rem;
 }
 
+.name, 
 h3 {
-  margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: normal;
-  color: var(--purple);
 }
 
 p {
-  margin-bottom: 2rem;
   font-size: 1.25rem;
 }
 
+h3,
+p {
+  margin-bottom: 2rem;
+}
+
 em {
-  color: var(--purple);
   font-style: normal;
   font-weight: bold;
+}
+
+h3,
+em {
+  color: var(--purple);
 }
 
 del {
