@@ -87,13 +87,15 @@ section {
 }
 
 section img.full,
-section video {
+video {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.12);
 }
 
 section img,
-section video {
+video {
   display: block;
   margin-bottom: 2rem;
 }
